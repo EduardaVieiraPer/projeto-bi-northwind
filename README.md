@@ -49,7 +49,7 @@ O projeto utiliza técnicas de BI, análise de dados e visualizações interativ
 ## 📈 Gráficos e Indicadores
 
 ### Produtos Mais Vendidos
-![Produtos Mais Vendidos](./imagens/produtos_mais_vendidos.png)
+![Produtos Mais Vendidos](./imagens/produtos_mais_vendidos_titulado.png)
 
 ### Receita por Categoria
 ![Receita por Categoria](./imagens/categorias_receita.png)
