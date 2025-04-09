@@ -37,78 +37,47 @@ O projeto utiliza técnicas de BI, análise de dados e visualizações interativ
 
 ## 🔍 Metodologia
 
-1. Compreensão do Desafio
-Iniciamos com uma análise do cenário atual da Northwind Traders, definindo perguntas de negócio orientadas a dados que ajudassem a alcançar os objetivos propostos.
+## 1. Compreensão do Desafio: Iniciamos com uma análise do cenário atual da Northwind Traders, definindo perguntas de negócio orientadas a dados que ajudassem a alcançar os objetivos propostos.
 
-2. Preparação dos Dados
-Leitura das Tabelas: Utilizamos o Pandas para importar as 14 tabelas disponíveis.
+## 2. Preparação dos Dados: Leitura das Tabelas: Utilizamos o Pandas para importar as 14 tabelas disponíveis.
 
-Análise Exploratória Inicial: Aplicamos métodos como .head(), .info() e .describe() para entender a estrutura e qualidade dos dados.
+## 3: Análise Exploratória Inicial: Aplicamos métodos como .head(), .info() e .describe() para entender a estrutura e qualidade dos dados.
+- Tratamento de Valores Nulos:
+- Textos: Substituídos por "Desconhecido".
+- Datas: Preenchidas com pd.NaT ou replicadas de order_date.
+- Tabelas Vazias: Descartamos tabelas sem dados relevantes, como customer_demographics.
 
-Tratamento de Valores Nulos:
+## 4. Análise Individual das Tabelas: Exploramos cada tabela isoladamente para obter insights preliminares:
+- Produtos por Categoria: Identificamos a distribuição dos produtos em suas respectivas categorias.
+- Clientes por País: Mapeamos a origem geográfica dos clientes.
+- Funcionários por Cargo: Analisamos a distribuição dos cargos na empresa.
+- Pedidos por Transportadora: Verificamos a frequência de uso de cada transportadora.
+- Boxplot do Frete: Detectamos outliers nos custos de frete.
 
-Textos: Substituídos por "Desconhecido".
-
-Datas: Preenchidas com pd.NaT ou replicadas de order_date.
-
-Tabelas Vazias: Descartamos tabelas sem dados relevantes, como customer_demographics.
-
-3. Análise Individual das Tabelas
-Exploramos cada tabela isoladamente para obter insights preliminares:
-
-Produtos por Categoria: Identificamos a distribuição dos produtos em suas respectivas categorias.
-
-Clientes por País: Mapeamos a origem geográfica dos clientes.
-
-Funcionários por Cargo: Analisamos a distribuição dos cargos na empresa.
-
-Pedidos por Transportadora: Verificamos a frequência de uso de cada transportadora.
-
-Boxplot do Frete: Detectamos outliers nos custos de frete.
-
-4. Integração dos Dados
-Realizamos merges estratégicos para consolidar as informações em um único DataFrame:
-
-Pedidos e Detalhes dos Pedidos: Unimos orders com order_details para obter a estrutura completa dos pedidos.
-
-Pedidos e Clientes: Associamos orders com customers para enriquecer com informações dos clientes.
-
-Pedidos e Funcionários: Vinculamos orders com employees para identificar os responsáveis pelas vendas.
-
-Pedidos e Transportadoras: Integramos orders com shippers para relacionar as transportadoras.
-
-Detalhes dos Pedidos, Produtos e Categorias: Combinamos order_details com products e categories para detalhar produtos e suas categorias.
-
-Produtos e Fornecedores: Unimos products com suppliers para obter informações dos fornecedores.
+## 5. Integração dos Dados: Realizamos merges estratégicos para consolidar as informações em um único DataFrame:
+- Pedidos e Detalhes dos Pedidos: Unimos orders com order_details para obter a estrutura completa dos pedidos.
+- Pedidos e Clientes: Associamos orders com customers para enriquecer com informações dos clientes.
+- Pedidos e Funcionários: Vinculamos orders com employees para identificar os responsáveis pelas vendas.
+- Pedidos e Transportadoras: Integramos orders com shippers para relacionar as transportadoras.
+- Detalhes dos Pedidos, Produtos e Categorias: Combinamos order_details com products e categories para detalhar produtos e suas categorias.
+- Produtos e Fornecedores: Unimos products com suppliers para obter informações dos fornecedores.
 Essa base consolidada permitiu cruzar dados de vendas, produtos, clientes, logística e equipe comercial de forma eficiente.
 
-5. Cálculo de Indicadores Estratégicos (KPIs)
-Com a base unificada, calculamos os seguintes indicadores:
+## 6. Cálculo de Indicadores Estratégicos (KPIs): Com a base unificada, calculamos os seguintes indicadores:
+- Ticket Médio por Pedido: Valor médio das vendas por pedido.
+- Produtos Mais Vendidos: Identificação dos produtos com maior volume de vendas.
+- Receita por Categoria e por Funcionário: Análise da contribuição de cada categoria de produto e desempenho individual dos funcionários.
+- Prazo Médio de Entrega: Tempo médio entre o pedido e a entrega.
+- Clientes com Apenas 1 Pedido (Churn): Identificação de clientes que realizaram apenas uma compra.
+- Total de Pedidos, Receita Total e Clientes Únicos: Métricas gerais de desempenho.
 
-Ticket Médio por Pedido: Valor médio das vendas por pedido.
+## 7. Visualizações Avançadas: Criamos visualizações para facilitar a interpretação dos dados:
+- Gráficos de Barras e Rosca: Para produtos mais vendidos e participação de categorias na receita.
+- Gráficos de Linha: Evolução das vendas ao longo do tempo.
+- Boxplots: Análise de custos de frete e identificação de outliers.
+- Tabelas e Cartões com Filtros Interativos: Segmentação por país, cidade, categoria e vendedor.
 
-Produtos Mais Vendidos: Identificação dos produtos com maior volume de vendas.
-
-Receita por Categoria e por Funcionário: Análise da contribuição de cada categoria de produto e desempenho individual dos funcionários.
-
-Prazo Médio de Entrega: Tempo médio entre o pedido e a entrega.
-
-Clientes com Apenas 1 Pedido (Churn): Identificação de clientes que realizaram apenas uma compra.
-
-Total de Pedidos, Receita Total e Clientes Únicos: Métricas gerais de desempenho.
-
-6. Visualizações Avançadas
-Criamos visualizações para facilitar a interpretação dos dados:
-
-Gráficos de Barras e Rosca: Para produtos mais vendidos e participação de categorias na receita.
-
-Gráficos de Linha: Evolução das vendas ao longo do tempo.
-
-Boxplots: Análise de custos de frete e identificação de outliers.
-
-Tabelas e Cartões com Filtros Interativos: Segmentação por país, cidade, categoria e vendedor.
-
-7. Modelo de Previsão
+## 8. Modelo de Previsão
 Implementamos uma regressão linear utilizando a biblioteca statsmodels para estimar a receita do ano seguinte, baseada em dados históricos. A previsão estimada foi de R$ 654.470,91.
 
 ---
