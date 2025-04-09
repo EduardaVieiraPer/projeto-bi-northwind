@@ -8,7 +8,7 @@
 
 ## 🧠 Desafio
 
-A Northwind Traders é uma distribuidora de alimentos e bebidas em expansão. O desafio era:
+A Northwind Traders é uma distribuidora de alimentos e bebidas em expansão. O desafio é:
 - 📈 Aumentar o **ticket médio dos pedidos**
 - 🔄 Reduzir o **churn** (clientes que compram apenas uma vez)
 
