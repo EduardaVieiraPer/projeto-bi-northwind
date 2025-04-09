@@ -49,19 +49,19 @@ O projeto utiliza técnicas de BI, análise de dados e visualizações interativ
 ## 📈 Gráficos e Indicadores
 
 ### Produtos Mais Vendidos
-![Produtos Mais Vendidos](./produtos_mais_vendidos_titulado.png)
+![Produtos Mais Vendidos](./produtos_mais_vendidos.png)
 
 ### Receita por Categoria
-![Receita por Categoria](./categorias_receita_titulado.png)
+![Receita por Categoria](./categorias_receita.png)
 
 ### Boxplot do Frete
-![Boxplot Frete](./boxplot_frete_titulado.png)
+![Boxplot do Frete](./boxplot_frete.png)
 
 ### Ticket Médio por Funcionário
-![Ticket Médio por Funcionário](./ticket_medio_funcionario_titulado.png)
+![Ticket Médio por Funcionário](./ticket_medio_funcionario.png)
 
 ### Projeção de Receita
-![Projeção de Receita](./projecao_receita_titulado.png)
+![Projeção de Receita](./projecao_receita.png)
 
 
 ---
